@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Shop</title>
+    <link rel="icon" type="image/x-icon" href="./favicon/icon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/logo.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        DOMOV
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        HRY
+                    </a>
+                </li>
+                <li class="menu-nav__item active">
+                    <a href="index.html" class="menu-nav__link">
+                        HARDWARE
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        SMARTFÓNY
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        PC DOPLNKY
+                    </a>
+                </li>
+                <li class="menu-nav__item sales">
+                    <a href="index.html" class="menu-nav__link">
+                        AKCIE
+                    </a>
+                </li>
+            </ul>  
+            
+        </nav>
+        
+        <a href="#" class="btn-search js-searchOpen" id="search-open"> 
+            <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+        </a>
+
+        <section class="search-overlay">
+            <form method="post" class="search-form">
+              <a href="#" class="btn-search js-searchClose" id="search-close">
+                <i class="fa fa-4x fa-times" aria-hidden="true"></i>
+              </a>
+          
+              <input class="search" type="search" placeholder="Search" />
+              <input class="search-submit" type="submit">
+            </form>
+        </section>
+
+        <div class="language">
+            <button onclick="showLanguages()" class="lang-dropdown-btn"><img src="icons/flags/SK.png"><b>€</b> <span>| SK</span></button>
+            <div class="dropdown-language">
+                <a class="language-content active" href="#"><b>€</b><span> | SK</span></a>
+                <a class="language-content" href="#"> <b>CZK</b><span> | CZ</span></a>
+                <a class="language-content" href="#"><b>$</b><span> | EN</span></a>
+            </div>
+        </div>
+          
+        <div class="shopping-cart">
+            <button class="dropdown-button">
+                <img src="icons/cart.png">
+                Košík
+                <div class="count">
+                    <p>4</p>
+                </div>
+            </button>
+
+            <div class="dropdown-cart">
+                <img class="dropdown-cart__icon" src="icons/cart2.png">
+                <div class="dropdown-cart__count"><p>4</p></div>
+                <div class="dropdown-cart__total">Celkom: <span>66.47 €</span></div>
+                
+                <hr>
+
+                <div class="dropdown-cart__products">
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia-de.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia Definitive Edition
+                        </a>
+                        <span class="price">19.99 €</span>
+                        <span class="quantity">Quantity: 2</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/gta5.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            GTA V
+                        </a>
+                        <span class="price">14.49 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/ps4/gow-ragnarok.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            God of War: Ragnarok | PS4
+                        </a>
+                        <span class="price">29.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia2.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia 2
+                        </a>
+                        <span class="price">9.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+                </div>
+                
+
+                <button type="submit" class="dropdown-cart__complete-btn">
+                    Dokončiť nákup
+                </button>
+
+            </div>
+        </div>
+
+        <a class="login-menu" href="login.html">
+            <div class="login">
+                <img src="icons/login.png" alt="logo">    
+                <p>Login</p>
+            </div>    
+        </a>
+
+    </header>
+
+    <header class="header1-responsive">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/logo.png">
+            </a>
+        </div>
+
+        <div class="menu-icon" onclick="toggleNavigationMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="responsive-menu-nav">
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        DOMOV
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        HRY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item active">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        HARDWARE
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        SMARTFÓNY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        PC DOPLNKY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item sales">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        AKCIE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  
+        <a class="login-menu" href="login.html">
+            <div class="login">
+                <img src="icons/login.png" alt="logo">    
+                <p>Login</p>
+            </div>    
+        </a>
+
+    </header>
+
+    <header class="header2-responsive">
+        <a href="#" class="btn-search js-searchOpen" id="search-open"> 
+            <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+        </a>
+
+        <section class="search-overlay">
+            <form method="post" class="search-form">
+              <a href="#" class="btn-search js-searchClose" id="search-close">
+                <i class="fa fa-4x fa-times" aria-hidden="true"></i>
+              </a>
+          
+              <input class="search" type="search" placeholder="Search" />
+              <input class="search-submit" type="submit">
+            </form>
+        </section>
+
+        <div class="language">
+            <button onclick="showLanguages()" class="lang-dropdown-btn"><img src="icons/flags/SK.png"><b>€</b> <span>| SK</span></button>
+            <div class="dropdown-language">
+                <a class="language-content active" href="#"><b>€</b><span> | SK</span></a>
+                <a class="language-content" href="#"> <b>CZK</b><span> | CZ</span></a>
+                <a class="language-content" href="#"><b>$</b><span> | EN</span></a>
+            </div>
+        </div>
+
+
+        <div class="shopping-cart">
+            <button class="dropdown-button">
+                <img src="icons/cart.png">
+                Košík
+                <div class="count">
+                    <p>4</p>
+                </div>
+            </button>
+
+            <div class="dropdown-cart">
+                <img class="dropdown-cart__icon" src="icons/cart2.png">
+                <div class="dropdown-cart__count"><p>4</p></div>
+                <div class="dropdown-cart__total">Celkom: <span>66.47 €</span></div>
+                <hr>
+
+                <div class="dropdown-cart__products">
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia-de.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia Definitive Edition
+                        </a>
+                        <span class="price">19.99 €</span>
+                        <span class="quantity">Quantity: 2</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/gta5.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            GTA V
+                        </a>
+                        <span class="price">14.49 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/ps4/gow-ragnarok.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            God of War: Ragnarok | PS4
+                        </a>
+                        <span class="price">29.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia2.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia 2
+                        </a>
+                        <span class="price">9.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+                </div>
+                
+
+                <button class="dropdown-cart__complete-btn">
+                    Dokončiť nákup
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main-product-show">
+        <div class="product-show">
+            <div class="product-show__image">
+                <img src="products/games/pc/rdr2.jpg">
+            </div>
+            <div class="product-show__title">
+                <h1>Red Dead Redemption 2</h1>
+            </div>
+            <hr>
+            <div class="product-show__text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit inventore esse quo vero asperiores dicta corrupti molestias non ex, sequi reprehenderit beatae laborum. Provident velit eum labore dolorum aliquid facere?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iste autem quod pariatur molestiae eaque odio, dolores quia modi accusantium nesciunt optio ab deserunt temporibus a, possimus enim, inventore libero?Lorem ipsum dolor sit amet consectetur, adipisicing elit. A porro veritatis optio voluptas soluta deserunt dolorem non, sit voluptate harum exercitationem maiores nobis commodi atque tempora saepe corrupti adipisci? Sequi!Loremlore-sm- Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quibusdam totam possimus sequi cumque amet nemo quod, debitis cum, saepe distinctio animi libero vero accusamus incidunt fugiat ab beatae repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestias unde animi nihil quisquam magnam dolorum velit ipsa eaque quidem provident excepturi, ducimus itaque enim fugit voluptates asperiores exercitationem. Asperiores!</p>
+            </div>
+
+            <div class="show-modal-div">
+                <button class="show-modal" id="show-modal" href="">
+                    Zobraziť ďalšie informácie
+                </button>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+                </div>   
+            </div>
+
+            <div class="product-show__rate">
+                <a href="#!" class="active">★</a>
+                <a href="#!" class="active">★</a>
+                <a href="#!" class="active">★</a>
+                <a href="#!">★</a>
+                <a href="#!">★</a>
+            </div>
+            <div class="product-show__price">
+                <span class="oldprice">699.99 €</span>
+                <span class="newprice">642.99 €</span>
+            </div>
+            <div class="product-show__hashtags">
+                <a href="">#PC</a>
+                <a href="">#2022</a>
+            </div>
+            <div class="product-show__quantity">
+                <label for="quantity">Quantity: </label>
+                <input name="quantity" type="number" min="1" max="100" value="1">
+            </div> 
+            <button class="product-show__add">Pridať do košíka</button> 
+        </div>
+
+        <h2 class="comments-title">Diskusia</h2>
+        <h2 class="reviews-title">Recenzie</h2> 
+
+        <div class="comments-reviews">
+            <div class="comments">
+                <div class="comments-upper"> 
+                    <div class="comments-upper__questions">
+                        Mate nejaké otázky? Spýtajte sa v diskusií.
+                    </div>          
+                    <button class="comments-upper__add">Spýtať sa v diskusií</button>
+                </div>
+                <ul class="comments__list">
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="comments-username">Samuel Šteiner</p>
+                        <div class="comments-answers">
+                            <a href="">
+                                <img src="icons/comment.png">
+                                <span class="comments-answers-count">2</span>
+                            </a>     
+                        </div>
+                        <div class="comments-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="reviews">
+                <div class="reviews-upper">
+                    <div class="reviews-upper__percent">
+                        99 <sup>%</sup>
+                    </div>
+                    <button class="reviews-upper__add">Napísať recenziu</button>   
+                    <div class="reviews-upper__rate">
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                    </div>
+                    <div class="reviews-upper__rate">
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                    </div>
+                    <div class="reviews-upper__rate">
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                    </div>
+                    <div class="reviews-upper__rate">
+                        <a href="#!" class="active">★</a>
+                        <a href="#!" class="active">★</a>
+                    </div>
+                    <div class="reviews-upper__rate">
+                        <a href="#!" class="active">★</a>
+                    </div>
+                    <p class="reviews-upper__count">1x</p>
+                    <p class="reviews-upper__count">0x</p>
+                    <p class="reviews-upper__count">2x</p>
+                    <p class="reviews-upper__count">4x</p>
+                    <p class="reviews-upper__count">1x</p>
+                </div>
+                <ul class="reviews__list">
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="reviews-username">Samuel Šteiner</p>
+                        <p class="reviews-total_stars">5x</p>
+                        <a href="#!" class="active">★</a>
+                        <div class="reviews-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit neque iusto a necessitatibus fuga assumenda, reiciendis, porro eius quam modi eveniet quae quis quod similique, earum cupiditate itaque at asperiores?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum iusto impedit numquam voluptatum possimus alias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="reviews-username">Samuel Šteiner</p>
+                        <p class="reviews-total_stars">5x</p>
+                        <a href="#!" class="active">★</a>
+                        <div class="reviews-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="reviews-username">Samuel Šteiner</p>
+                        <p class="reviews-total_stars">5x</p>
+                        <a href="#!" class="active">★</a>
+                        <div class="reviews-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="reviews-username">Samuel Šteiner</p>
+                        <p class="reviews-total_stars">5x</p>
+                        <a href="#!" class="active">★</a>
+                        <div class="reviews-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="icons/login.png">
+                        <p class="reviews-username">Samuel Šteiner</p>
+                        <p class="reviews-total_stars">5x</p>
+                        <a href="#!" class="active">★</a>
+                        <div class="reviews-text">
+                            Lorem ipsum dolor sit aum doalias. Sit repudiandae assumenda nobis ratione delectus cupiditate necessitatibus facere saepe id? Facere ipsam tenetur placeat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae modi suscipit, eaque perspiciatis odio laborum libero, molestias ducimus deleniti fugiat inventore veritatis ea eos corporis sit velit explicabo ut soluta.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <aside class="aside-darkmode">
+            <div class="slideThree">  
+                <input onclick="darkMode()" type="checkbox" value="None" id="slideThree" name="check" />
+                <label for="slideThree"></label>
+            </div>
+        </aside>
+        <a href="#" class="go-top"><i class="arrow up"></i></a>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Steiner - 2022</p>
+        <div class="social">
+            <a href="">
+                <img src="icons/fb.png">
+            </a>
+            <a href="">
+                <img src="icons/ig.png">
+            </a>
+            <a href="">
+                <img src="icons/github.png">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/61ebb60581.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/darkMode.js"></script>
+    <script type="text/javascript" src="js/menuToggle.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/shoppingCart.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/language.js"></script>
+    <script type="text/javascript" src="js/decimalRange.js"></script>
+    <script type="text/javascript" src="js/dropCheckbox.js"></script>
+    <script type="text/javascript" src="js/range.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+</body>
+</html>

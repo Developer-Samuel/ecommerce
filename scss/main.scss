@@ -1,0 +1,26 @@
+@import 'config';
+@import 'header';
+@import 'page';
+@import 'footer';
+@import 'loginSignup';
+@import 'edit';
+@import 'products';
+@import 'showProduct';
+@import 'cart';
+
+@import 'responsive/header';
+@import 'responsive/page';
+@import 'responsive/footer';
+@import 'responsive/loginSignup';
+@import 'responsive/edit';
+@import 'responsive/products';
+@import 'responsive/showProduct';
+@import 'responsive/cart';
+
+body
+{
+    font-family:'Times New Roman', Times, serif;
+    background: $white-color;
+}
+
+

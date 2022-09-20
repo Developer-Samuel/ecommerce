@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Shop</title>
+    <link rel="icon" type="image/x-icon" href="./favicon/icon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/logo.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        DOMOV
+                    </a>
+                </li>
+                <li class="menu-nav__item active">
+                    <a href="index.html" class="menu-nav__link">
+                        HRY
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        HARDWARE
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        SMARTFÓNY
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">
+                        PC DOPLNKY
+                    </a>
+                </li>
+                <li class="menu-nav__item sales">
+                    <a href="index.html" class="menu-nav__link">
+                        AKCIE
+                    </a>
+                </li>
+            </ul>  
+            
+        </nav>
+        
+        <a href="#" class="btn-search js-searchOpen" id="search-open"> 
+            <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+        </a>
+
+        <section class="search-overlay">
+            <form method="post" class="search-form">
+              <a href="#" class="btn-search js-searchClose" id="search-close">
+                <i class="fa fa-4x fa-times" aria-hidden="true"></i>
+              </a>
+          
+              <input class="search" type="search" placeholder="Search" />
+              <input class="search-submit" type="submit">
+            </form>
+        </section>
+
+        <div class="language">
+            <button onclick="showLanguages()" class="lang-dropdown-btn"><img src="icons/flags/SK.png"><b>€</b> <span>| SK</span></button>
+            <div class="dropdown-language">
+                <a class="language-content active" href="#"><b>€</b><span> | SK</span></a>
+                <a class="language-content" href="#"> <b>CZK</b><span> | CZ</span></a>
+                <a class="language-content" href="#"><b>$</b><span> | EN</span></a>
+            </div>
+        </div>
+          
+        <div class="shopping-cart">
+            <button class="dropdown-button">
+                <img src="icons/cart.png">
+                Košík
+                <div class="count">
+                    <p>4</p>
+                </div>
+            </button>
+
+            <div class="dropdown-cart">
+                <img class="dropdown-cart__icon" src="icons/cart2.png">
+                <div class="dropdown-cart__count"><p>4</p></div>
+                <div class="dropdown-cart__total">Celkom: <span>66.47 €</span></div>
+                
+                <hr>
+
+                <div class="dropdown-cart__products">
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia-de.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia Definitive Edition
+                        </a>
+                        <span class="price">19.99 €</span>
+                        <span class="quantity">Quantity: 2</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/gta5.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            GTA V
+                        </a>
+                        <span class="price">14.49 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/ps4/gow-ragnarok.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            God of War: Ragnarok | PS4
+                        </a>
+                        <span class="price">29.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia2.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia 2
+                        </a>
+                        <span class="price">9.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+                </div>
+                
+
+                <button type="submit" class="dropdown-cart__complete-btn">
+                    Dokončiť nákup
+                </button>
+
+            </div>
+        </div>
+
+        <a class="login-menu" href="login.html">
+            <div class="login">
+                <img src="icons/login.png" alt="logo">    
+                <p>Login</p>
+            </div>    
+        </a>
+
+    </header>
+
+    <header class="header1-responsive">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/logo.png">
+            </a>
+        </div>
+
+        <div class="menu-icon" onclick="toggleNavigationMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="responsive-menu-nav">
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        DOMOV
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item active">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        HRY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        HARDWARE
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        SMARTFÓNY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        PC DOPLNKY
+                    </a>
+                </li>
+                <li class="responsive-menu-nav__item sales">
+                    <a href="index.html" class="responsive-menu-nav__link">
+                        AKCIE
+                    </a>
+                </li>
+            </ul>
+        </div>
+  
+        <a class="login-menu" href="login.html">
+            <div class="login">
+                <img src="icons/login.png" alt="logo">    
+                <p>Login</p>
+            </div>    
+        </a>
+
+    </header>
+
+    <header class="header2-responsive">
+        <a href="#" class="btn-search js-searchOpen" id="search-open"> 
+            <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+        </a>
+
+        <section class="search-overlay">
+            <form method="post" class="search-form">
+              <a href="#" class="btn-search js-searchClose" id="search-close">
+                <i class="fa fa-4x fa-times" aria-hidden="true"></i>
+              </a>
+          
+              <input class="search" type="search" placeholder="Search" />
+              <input class="search-submit" type="submit">
+            </form>
+        </section>
+
+        <div class="language">
+            <button onclick="showLanguages()" class="lang-dropdown-btn"><img src="icons/flags/SK.png"><b>€</b> <span>| SK</span></button>
+            <div class="dropdown-language">
+                <a class="language-content active" href="#"><b>€</b><span> | SK</span></a>
+                <a class="language-content" href="#"> <b>CZK</b><span> | CZ</span></a>
+                <a class="language-content" href="#"><b>$</b><span> | EN</span></a>
+            </div>
+        </div>
+
+
+        <div class="shopping-cart">
+            <button class="dropdown-button">
+                <img src="icons/cart.png">
+                Košík
+                <div class="count">
+                    <p>4</p>
+                </div>
+            </button>
+
+            <div class="dropdown-cart">
+                <img class="dropdown-cart__icon" src="icons/cart2.png">
+                <div class="dropdown-cart__count"><p>4</p></div>
+                <div class="dropdown-cart__total">Celkom: <span>66.47 €</span></div>
+                <hr>
+
+                <div class="dropdown-cart__products">
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia-de.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia Definitive Edition
+                        </a>
+                        <span class="price">19.99 €</span>
+                        <span class="quantity">Quantity: 2</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/gta5.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            GTA V
+                        </a>
+                        <span class="price">14.49 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+    
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/ps4/gow-ragnarok.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            God of War: Ragnarok | PS4
+                        </a>
+                        <span class="price">29.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+
+                    <div class="dropdown-cart__products-product">
+                        <a class="image-link" href="">
+                            <img src="products/games/pc/mafia2.jpg">
+                        </a>
+                        <a class="title-link" href="">
+                            Mafia 2
+                        </a>
+                        <span class="price">9.99 €</span>
+                        <span class="quantity">Quantity: 1</span>
+                    </div>
+                </div>
+                
+
+                <button class="dropdown-cart__complete-btn">
+                    Dokončiť nákup
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main-products">      
+        <nav class="nav-filter">
+            <form class="filter-form" method="GET">
+                <div class="filter-price">
+                    <h3>Cena</h3>
+                    <hr>
+                    <div class="range-slider-wrapper" data-range-slider="true">
+                        <input class="min-input" type="number" name="min-price" min="1" max="1000" value="1" aria-label="Min" title="Min"><span class="min-span">až</span>
+                        <div class="range-slider">
+                          <input value="1" min="1" max="1000" type="range">
+                          <input value="1000" min="1" max="1000" type="range">
+                        </div>
+                        <input class="max-input" type="number" name="max-price" min="1" max="1000" value="1000" aria-label="Max" title="Max"><span class="max-span">€</span>
+                    </div>
+                </div>
+                <div class="filter-product">
+                    <h3>Žánre</h3>
+                    <hr>
+                    <ul>
+                        <li><input name="action" type="checkbox"><label for="action">Akčné</label><small>(11)</small></li>
+                        <li><input name="adventure" type="checkbox"><label for="action">Adventúry</label><small>(11)</small></li>
+                        <li><input name="survival" type="checkbox"><label for="action">Survival</label><small>(11)</small></li>
+                        <li><input name="rpg" type="checkbox"><label for="action">RPG</label><small>(11)</small></li>
+                        <li><input name="rpg" type="checkbox"><label for="action">FPS</label><small>(11)</small></li>
+                        <li><input name="racing" type="checkbox"><label for="action">Závodné</label><small>(11)</small></li>
+                    </ul>
+                </div>
+                <div class="filter-product" id="game-platform">
+                    <h3>Platformy</h3>
+                    <hr>
+                    <ul>
+                        <li><input name="pc" type="checkbox"><label for="action">PC</label><small>(11)</small></li>
+                        <li><input name="ps4" type="checkbox"><label for="action">PS4</label><small>(11)</small></li>
+                        <li><input name="ps5" type="checkbox"><label for="action">PS5</label><small>(11)</small></li>
+                        <li><input name="xbox_one" type="checkbox"><label for="action">Xbox One</label><small>(11)</small></li>
+                    </ul>
+                </div>
+                <div class="filter-product">
+                    <h3>Jazyky</h3>
+                    <hr>
+                    <ul>
+                        <li><input name="cz" type="checkbox"><label for="action">CZ</label><small>(11)</small></li>
+                        <li><input name="en" type="checkbox"><label for="action">EN</label><small>(11)</small></li>
+                        <li><input name="de" type="checkbox"><label for="action">DE</label><small>(11)</small></li>
+                        <li><input name="es" type="checkbox"><label for="action">ES</label><small>(11)</small></li>
+                        <li><input name="pl" type="checkbox"><label for="action">PL</label><small>(11)</small></li>
+                        <li><input name="ru" type="checkbox"><label for="action">RU</label><small>(11)</small></li>
+                        <li><input name="fr" type="checkbox"><label for="action">FR</label><small>(11)</small></li>
+                    </ul>
+                </div>
+            </form>
+        </nav>
+
+        <h1 class="title-h1">Hry</h1>
+        <div class="product">
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/rdr2.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Red Dead Redemption 2</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">34.99 €</span>
+                    <span class="newprice">17.49 €</span>
+                </div>
+                
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/gta5.jpg">
+                    <div><p>- 40 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>GTA V</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">15.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/mafia-de.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Mafia Definitive Edition</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">24.99 €</span>
+                    <span class="newprice">12.49 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/ps5/battlefield2042.jpg">
+                    <div><p>- 60 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Battlefield 2042</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">59.99 €</span>
+                    <span class="newprice">34.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/gta4.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>GTA 4</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">14.99 €</span>
+                    <span class="newprice">7.49 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/cod-iw.jpg">
+                    <div><p>- 65 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Call of Duty: Infinity Warfare</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">29.99 €</span>
+                    <span class="newprice">9.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/ps4/gow-ragnarok.jpg">
+                    <div><p>- 25 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>God of War: Ragnarok</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">29.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/xbox_one/forza-horizon-5.jpg">
+                    <div><p>- 40 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Forza Horizon 5</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">15.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/rdr2.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Red Dead Redemption 2</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">34.99 €</span>
+                    <span class="newprice">17.49 €</span>
+                </div>
+                
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/gta5.jpg">
+                    <div><p>- 40 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>GTA V</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">15.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/mafia-de.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Mafia Definitive Edition</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">24.99 €</span>
+                    <span class="newprice">12.49 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/ps5/battlefield2042.jpg">
+                    <div><p>- 60 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Battlefield 2042</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">59.99 €</span>
+                    <span class="newprice">34.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/gta4.jpg">
+                    <div><p>- 50 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>GTA 4</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">14.99 €</span>
+                    <span class="newprice">7.49 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/pc/cod-iw.jpg">
+                    <div><p>- 65 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Call of Duty: Infinity Warfare</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">29.99 €</span>
+                    <span class="newprice">9.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/ps4/gow-ragnarok.jpg">
+                    <div><p>- 25 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>God of War: Ragnarok</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">29.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+
+            <div class="product__item">
+                <a class="product__link" href="">
+                    <img src="products/games/xbox_one/forza-horizon-5.jpg">
+                    <div><p>- 40 %</p></div>
+                </a>
+                <a class="product__title" href="">
+                    <h4>Forza Horizon 5</h4>
+                </a>
+                <div class="product__price">
+                    <span class="oldprice">39.99 €</span>
+                    <span class="newprice">15.99 €</span>
+                </div>
+                <button class="product__add">Pridať do košíka</button>
+            </div>
+        </div> 
+        
+        <div class="pagination">
+            <div class="pages">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>      
+        </div>
+
+        <div class="total-records">Počet záznamov: 16</div>
+
+        <aside class="aside-darkmode">
+            <div class="slideThree">  
+                <input onclick="darkMode()" type="checkbox" value="None" id="slideThree" name="check" />
+                <label for="slideThree"></label>
+            </div>
+        </aside>
+        <a href="#" class="go-top"><i class="arrow up"></i></a>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Steiner - 2022</p>
+        <div class="social">
+            <a href="">
+                <img src="icons/fb.png">
+            </a>
+            <a href="">
+                <img src="icons/ig.png">
+            </a>
+            <a href="">
+                <img src="icons/github.png">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/61ebb60581.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/darkMode.js"></script>
+    <script type="text/javascript" src="js/menuToggle.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/shoppingCart.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/language.js"></script>
+    <script type="text/javascript" src="js/decimalRange.js"></script>
+    <script type="text/javascript" src="js/dropCheckbox.js"></script>
+    <script type="text/javascript" src="js/range.js"></script>
+</body>
+</html>
